@@ -1,0 +1,38 @@
+//NAME:MAHI THAKRAR
+//PRN:24070123056
+//ENTC A3
+//EXPERIMENT-20
+
+#include <iostream>
+#include <vector>
+
+class SearchAlgorithms{
+    public:
+    void linearSearch(std::vector<int>& temp, int key){
+        int flag=0;
+        for(int i=0; i<7; i++){
+            if(temp[i]==key){
+                std::cout<< "Element found at index "<< i<< std::endl;
+                return;
+            }
+            else{
+                flag=1;
+            }
+        }
+        if(flag==1){
+            std::cout<< "Element not found!\n";
+        }
+    }
+};
+
+int main(){
+    std::vector<int> myVector={1, 5, 2, 6, 3, 9, 0};
+    SearchAlgorithms object1;
+    object1.linearSearch(myVector,10);
+
+    return 0;
+}
+
+
+//Output:
+//Element not found!
